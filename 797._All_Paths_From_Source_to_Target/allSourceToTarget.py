@@ -3,8 +3,7 @@ def allSourceToTarget(graph):
   route = [0]
   def dfs(graph, source, destination, route, paths):
     if source == destination:
-      currentRoute = route
-      paths.append(currentRoute.copy())
+      paths.append(route.copy())
       return
     for element in graph[source]:
       route.append(element)
